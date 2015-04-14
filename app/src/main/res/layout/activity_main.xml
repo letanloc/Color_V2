@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/mainlayout">
+
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/appbarr" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+          android:layout_below="@+id/appbarr"
+       >
+        <!--gọi layout  viwq tu thu vien lúc nảy ta tạo-->
+        <com.letanloc.color_v2.DrawableView
+            android:id="@+id/drawing"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:background="#FFFFFFFF" />
+
+        <com.arc_Layout.widget.ClipRevealFrame
+            android:id="@+id/menu_layout"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@color/tumblr_primary"
+            android:visibility="invisible"
+            android:layout_gravity="center_horizontal|bottom">
+
+            <!--<com.arc_Layout.ArcLayout-->
+                <!--android:id="@+id/arLayou"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--app:arc_origin="center"-->
+                <!--app:arc_radius="135dp"-->
+                <!--app:arc_axisRadius="100dp">-->
+
+
+                <!--</com.arc_Layout.ArcLayout>-->
+
+
+        </com.arc_Layout.widget.ClipRevealFrame>
+
+    </FrameLayout>
+
+
+    <Button
+        android:id="@+id/fab"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:text="+"
+        android:textSize="24sp"
+        android:textColor="#FFF"
+        android:background="@drawable/arc_button"
+        android:layout_gravity="right|bottom" />
+
+</RelativeLayout>
